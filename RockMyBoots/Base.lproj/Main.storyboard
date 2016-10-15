@@ -59,7 +59,7 @@
                                 <frame key="frameInset" minY="249" width="375" height="418"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="vzt-PK-aiE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="86" id="vzt-PK-aiE" customClass="PartyCell" customModule="RockMyBoots" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vzt-PK-aiE" id="DIX-jh-jS2">
@@ -91,6 +91,10 @@
                                                 <constraint firstItem="UA8-7w-eg8" firstAttribute="leading" secondItem="phF-dQ-vQ2" secondAttribute="trailing" constant="8" id="mnh-02-da8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="phF-dQ-vQ2" id="Yle-q7-p9C"/>
+                                            <outlet property="videoTitle" destination="UA8-7w-eg8" id="30L-Aa-4iH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -110,6 +114,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="XNO-bf-Oup" id="pXB-TB-jgb"/>
                         <segue destination="SVK-pz-nh3" kind="show" identifier="VideoVC" id="PqC-Wj-bfh"/>
                     </connections>
                 </viewController>
@@ -136,7 +141,7 @@
                                 </constraints>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.79338942310000005" green="0.79338942310000005" blue="0.79338942310000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qat-by-lVG" firstAttribute="leading" secondItem="7gP-9w-us2" secondAttribute="leading" id="hET-uE-bQa"/>
                             <constraint firstItem="Qat-by-lVG" firstAttribute="top" secondItem="7gP-9w-us2" secondAttribute="top" id="ii9-Ca-cOd"/>
